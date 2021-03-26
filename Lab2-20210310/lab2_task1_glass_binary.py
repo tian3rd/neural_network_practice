@@ -14,7 +14,7 @@ import torch.nn.functional as F
 Step 1: Load data and pre-process data
 """
 # load all data
-data = pd.read_csv('glass.csv',  header=None)
+data = pd.read_csv('glass.data',  header=None)
 # drop first column as it is identifier
 data.drop(data.columns[0], axis=1, inplace=True)
 
