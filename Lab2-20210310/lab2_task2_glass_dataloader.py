@@ -60,7 +60,7 @@ class DataFrameDataset(torch.utils.data.Dataset):
         return n
 
 # load all data
-data = pd.read_csv('glass.csv', header=None, index_col=0)
+data = pd.read_csv('glass.data', header=None, index_col=0)
 
 # normalise input data
 for column in data.columns[:-1]:
