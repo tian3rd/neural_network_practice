@@ -55,7 +55,7 @@ def crossover(parent, pop):
         # randomly select another individual from population
         i = np.random.randint(0, POP_SIZE, size=1)    
         # choose crossover points(bits)
-        cross_points = np.random.randint(0, 2, size=DNA_SIZE).astype(np.bool)
+        cross_points = np.random.randint(0, 2, size=DNA_SIZE).astype(bool)
         # produce one child
         parent[cross_points] = pop[i, cross_points]  
     return parent
@@ -79,7 +79,9 @@ def mutate(child):
 
 
 # initialise population DNA
-pop = np.random.randint(0, 2, (1, DNA_SIZE)).repeat(POP_SIZE, axis=0) #note there is a mistake here that needs correcting
+# pop = np.random.randint(0, 2, (1, DNA_SIZE)).repeat(POP_SIZE, axis=0) #note there is a mistake here that needs correcting
+pop = np.random.randint(0, 2, (POP_SIZE, DNA_SIZE))
+print(pop)
 
 
 # here are some commands for plotting to show learning process;
